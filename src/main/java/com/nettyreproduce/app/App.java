@@ -4,10 +4,6 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.buffer.UnpooledByteBufAllocator;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -25,7 +21,7 @@ public class App
         ByteBuf b = alloc.buffer(3000000, 3000000);
         b.release();
 
-        System.out.println("test1 usedDirectMemory:" + alloc.metric().usedDirectMemory());
+        System.out.println("test1 usedDirectMemory:" + alloc.metric().usedDirectMemory()); //test1 usedDirectMemory:0
     }
 
     private static void test2(){
@@ -33,7 +29,7 @@ public class App
         ByteBuf b = alloc.buffer(1000000, 1000000);
         b.release();
 
-        System.out.println("test2 usedDirectMemory:" + alloc.metric().usedDirectMemory());
+        System.out.println("test2 usedDirectMemory:" + alloc.metric().usedDirectMemory()); //test2 usedDirectMemory:16777216
     }
 
     private static void test3(){
@@ -41,7 +37,7 @@ public class App
         ByteBuf b = alloc.buffer(3000000, 3000000);
         b.release();
 
-        System.out.println("test3 usedDirectMemory:" + alloc.metric().usedDirectMemory());
+        System.out.println("test3 usedDirectMemory:" + alloc.metric().usedDirectMemory()); //test3 usedDirectMemory:0
     }
 
     private static void test4(){
@@ -49,7 +45,7 @@ public class App
         ByteBuf b = alloc.buffer(1000000, 1000000);
         b.release();
 
-        System.out.println("test4 usedDirectMemory:" + alloc.metric().usedDirectMemory());
+        System.out.println("test4 usedDirectMemory:" + alloc.metric().usedDirectMemory()); //test4 usedDirectMemory:16777216
     }
 
     private static void test5(){
@@ -57,7 +53,7 @@ public class App
         ByteBuf b = alloc.buffer(3000000, 3000000);
         b.release();
 
-        System.out.println("test5 usedDirectMemory:" + alloc.metric().usedDirectMemory());
+        System.out.println("test5 usedDirectMemory:" + alloc.metric().usedDirectMemory()); //test5 usedDirectMemory:0
     }
 
     private static void test6(){
@@ -65,6 +61,6 @@ public class App
         ByteBuf b = alloc.buffer(1000000, 1000000);
         b.release();
 
-        System.out.println("test6 usedDirectMemory:" + alloc.metric().usedDirectMemory());
+        System.out.println("test6 usedDirectMemory:" + alloc.metric().usedDirectMemory()); //test6 usedDirectMemory:0
     }
 }
